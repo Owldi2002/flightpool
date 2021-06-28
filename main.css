@@ -1,0 +1,758 @@
+@font-face {
+    font-family: "Montserrat-Italic";
+    src: url("../fonts/Montserrat-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat-Light";
+    outline: none;
+}
+
+body {
+    background-image: url(../imgs/bgtest2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat-Medium";
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: lightskyblue;
+    background: linear-gradient(lightskyblue 20%, #ffffff00);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.quote {
+    transition: all 0.3s ease-in-out;
+    animation: 10s colors;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colors {
+    0% {
+        color: black;
+    }
+    25% {
+        color: #67a1b8;
+    }
+    50% {
+        color: crimson;
+    }
+    75% {
+        color: #51a100;
+    }
+    100% {
+        color: black;
+    }
+}
+
+.hrefLogo {
+    position: absolute;
+    left: 50px;
+    margin: 0 5% 0 15%;
+    user-select: none;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    transition: all 0.2s;
+    border-bottom: 2px solid #00000000;
+}
+.hrefLogo:hover {
+    border-bottom: 2px solid #000000;
+}
+
+.test-0-logo {
+    margin-bottom: 40px;
+    height: 15vh;
+}
+
+nav {
+    margin-right: 10vw;
+}
+
+.navMenu {
+    display: flex;
+    list-style: none;
+}
+
+.navMenu a {
+    text-decoration: none;
+    color: black;
+}
+
+.navMenu li {
+    user-select: none;
+    font-size: 1.3em;
+    padding: 5px;
+    cursor: pointer;
+    margin-right: 30px;
+    border-bottom: 2px solid rgb(0, 0, 0, 0);
+    transition: 0.1s ease-in-out;
+}
+
+.navMenu li:hover {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.navMenu li:active {
+    background-color: rgba(108, 159, 190, 0.644);
+}
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hr {
+    height: 0px;
+    border: 1px solid black;
+    width: 50%;
+}
+
+.bottomBtn {
+    cursor: pointer;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    height: 50px;
+    width: 50px;
+    margin-top: 85px;
+    transform: rotate(135deg);
+}
+
+.animation {
+    animation: 3s btn;
+    animation-iteration-count: infinite;
+}
+
+@keyframes btn {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(0px, 50px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    /* background-image: url(../imgs/bg4.jpg); */
+}
+
+.about h1 {
+    font-size: 50px;
+}
+
+.about p {
+    font-size: 40px;
+    margin: 70px;
+}
+
+.links {
+    display: flex;
+    margin-top: 60px;
+}
+
+.firstColumn, .secondColumn {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstColumn a, .secondColumn a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    border-bottom: 2px solid #00000000;
+    transition: all 0.1s;
+}
+
+.firstColumn a:hover, .secondColumn a:hover {
+    border-bottom: 2px solid black;
+}
+
+.advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 100px 0 100px 0;
+    background: linear-gradient(to bottom, #cef1ff00, #cef1ff, #cef1ff00);
+}
+
+.advantages p {
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+
+.articles {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.advantage h4 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.advantage p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.advantage img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.advantage {
+    cursor: default;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: max-content;
+    border: 2px solid #00000000;
+    border-radius: 15px;
+    transition: all 0.2s;
+    background-color: #ffffff60;
+}
+
+.advantage:hover {
+    background-color: #ffffff95;
+    border: 2px solid skyblue;
+}
+
+.search {
+    border: 1px solid gray;
+    padding: 50px 300px 50px 300px;
+}
+
+.searchForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #00000000;
+    border: 2px solid skyblue;
+    padding: 10px 30px 10px 30px;
+    font-size: 30px;
+    transition: all 0.1s ease-in-out;
+}
+
+.button:hover {
+    background-color: skyblue;
+}
+
+.button:active {
+    background-color: #67a1b8;
+}
+
+.searchButton {
+    font-size: 24px;
+}
+
+.inpForm {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #00000000;
+    padding: 15px;
+    width: 300px;
+    transition: all 0.1s ease-in;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.inpForm:focus::placeholder {
+    transition: all 0.1s ease-in;
+    color:  #00000000;
+}
+
+.inpForm:focus {
+    border-bottom: 1px solid rgb(25, 168, 0);
+}
+
+.discount {
+    margin: 100px 0 100px 0;
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #dcf5ff;
+    background: linear-gradient(to bottom, #cef1ff00, #cef1ff 50%,#cef1ff00);
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sliderContent {
+    padding: 50px;
+    list-style: none;
+    overflow: hidden;
+    min-height: 400px;
+    width: 50%;
+    display: flex;
+}
+.sliderContent img {
+    height: 600px;
+    width: 100%;
+}
+.sliderContent h3 {
+    font-size: 22px;
+}
+.sliderContent p {
+    font-size: 20px;
+}
+.slideBtn {
+    margin: 0 40px 0 40px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 50px;
+    border: 3px solid #00000000;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    transition: all 0.1s;
+}
+.slideBtn:hover {
+    border: 3px solid white;
+}
+.slideBtn:active {
+    background-color: white;
+}
+
+
+.closeDiscount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 50px 300px 50px 300px;
+    margin-bottom: 150px;
+}
+
+
+
+.phone {
+    margin: 60px;
+}
+
+.none {
+    display: none;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    background-color: lightskyblue;
+    background: linear-gradient( #ffffff00 10%, lightskyblue);
+}
+
+
+/* search.html */
+
+.title {
+    font-size: 40px;
+}
+.title-sub {
+    font-size: 30px;
+}
+
+.races {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    width: 80%;
+}
+
+.race {
+    border: 4px dashed skyblue;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 40px;
+    /* background-color: #ffffff60; */
+	width: 320px;
+    background: url(../imgs/card2.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 550px;
+}
+.race p {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+.test-4-dd {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 290px;
+    left: 10px;
+}
+.airportTo {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 290px;
+    right: 10px;
+}
+.timeSearch {
+    position: absolute;
+    top: 155px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.test-4-at {
+    text-align: center;
+}
+.bottomCard {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.bottomCard p {
+    margin: 7px;
+}
+
+.test-4-ft {
+    font-family: "Montserrat-Medium";
+    font-size: 24px;
+}
+.test-4-ft span{
+    font-family: "Montserrat-Medium";
+    font-size: 24px;
+}
+
+/* progressbar */
+
+.progressbar {
+    height: 25px;
+    width: 200px;
+    border: 1px solid black;
+}
+.progressbar-val {
+    height: 100%;
+    background: linear-gradient(to right, rgb(0, 219, 0), rgb(0, 255, 179));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logSign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.formHrefs {
+    margin-top: 30px;
+}
+
+.person {
+    width: 65%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.titlePerson {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    justify-content: center;
+    
+}
+.name, .surname {
+    font-size: 30px;
+    font-family: "Montserrat-Medium";
+}
+.avatar {
+    margin-right: 30px;
+}
+
+.fade {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    margin-left: 20px;
+    border-bottom: 2px solid #00000000;
+}
+.fade:hover {
+    border-bottom: 2px solid #000000;
+    transition: all 0.3s ease-in-out;
+}
+.futureFlights {
+    width: 100%;
+}
+.futFlights {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.flight {
+    margin: 20px;
+    font-size: 22px;
+    border: 2px dashed skyblue;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #ffffff60;
+}
+
+.information {
+    font-size: 22px;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.map {
+    width: 60%;
+}
+
+.lineMap {
+    width: 100%;
+    height: 50px;
+    background: url(../imgs/linemap.png);
+}
+
+.lcr {
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.right {
+    text-align: right;
+}
+.center {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#statusFlight {
+    position: absolute;
+    color: yellow;
+}
+
+.cost {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.modalReg, .modalLog {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-color: rgba(144, 144, 144, 0.712);
+}
+.modalReg {
+    z-index: 100;
+}
+.modalLog {
+    z-index: 101;
+}
+
+.logModal, .regModal {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logModal form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: 30vw;
+    padding: 60px;
+    border-radius: 15px;
+    background-color: #eefafff6;
+}
+
+.regModal form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    padding: 25px;
+    padding: 60px;
+    border-radius: 15px;
+    background-color: #eefafff6;
+}
+
+.toRegModbtn, .toLogModbtn {
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 15px;
+    border-bottom: 1px solid #00000000;
+    transition: all 0.1s;
+}
+.toRegModbtn:hover, .toLogModbtn:hover {
+    border-bottom: 1px solid #000000;
+}
+
+.closeModalBtn {
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.logModal .searchForm .button {
+    font-size: 20px;
+}
+
+.regModal .searchForm input {
+    font-size: 20px;
+}
+
+.tablePersons {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(128, 128, 128, 0.507);
+}
+
+/* tr:last-child {
+    background-color: rgba(128, 128, 128, 0.507);
+} */
+
+td {
+    padding: 30px;
+    border-right: 1px solid black;
+}
+
+tr td:nth-last-child(2), tr td:nth-last-child(1) {
+    border: none;
+    background-color: #00000000;
+}
+
+.addPerson, .removePerson {
+    user-select: none;
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    transition: all 0.1s ease-in-out;
+    align-self: flex-start;
+}
+
+.addPerson:hover, .removePerson:hover {
+    background-color: #00000030;
+}
+
+.addPerson:active, .removePerson:active {
+    background-color: #00000060;
+}
+
+.bookBtn {
+    font-size: 30px;
+}
+
+.persons {
+    width: 60%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
+.deletePerson, .nonePers {
+    font-size: 30px;
+    display: none;
+}

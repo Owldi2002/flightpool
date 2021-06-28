@@ -1,0 +1,71 @@
+$(document).ready(function () {
+    let slide = 1;
+
+
+
+    $('.labelJS').on('focus', function () {
+        $('label').fadeIn(250);
+    })
+
+    $('#lBtnSlider').on('click', function () {
+        if (slide == 1) {
+            $('#slide1').fadeOut(250);
+            $('#slide4').delay(248).fadeIn(250);
+            slide = 4;
+        } else {
+            let slideTag = '#slide' + slide;
+            $(slideTag).fadeOut(250);
+            slide--;
+            slideTag = '#slide' + slide;
+            $(slideTag).delay(248).fadeIn(250);
+        }
+    })
+    $('#rBtnSlider').on('click', function () {
+        if (slide == 4) {
+            $('#slide4').fadeOut(250);
+            $('#slide1').delay(248).fadeIn(250);
+            slide = 1;
+        } else {
+            let slideTag = '#slide' + slide;
+            $(slideTag).fadeOut(250);
+            slide++;
+            slideTag = '#slide' + slide;
+            $(slideTag).delay(248).fadeIn(250);
+        }
+    })
+
+    $('.animation').on('click', function () {
+        $('html, body').animate({
+            scrollTop: 700
+        }, 500);
+    })
+    $('.titlePerson').hover(function () {
+        $('.fade').fadeIn(150);
+    }, function () {
+        $('.fade').fadeOut(150);
+    })
+
+    $('.regModBtn').on('click', function(){
+        $('.modalLog').fadeOut();
+        $('.modalReg').fadeIn(200);
+    })
+    $('.logModBtn').on('click', function(){
+        $('.modalReg').fadeOut();
+        $('.modalLog').fadeIn(200);
+    })
+
+    $('.closeModalBtn').on('click', function(){
+        $('.modalReg, .modalLog').fadeOut(120);
+    })
+
+    $('.toRegModbtn').on('click', function(){
+        $('.modalLog').fadeOut(150);
+        $('.modalReg').delay(150).fadeIn(150);
+    })
+    $('.toLogModbtn').on('click', function(){
+        $('.modalReg').fadeOut(150);
+        $('.modalLog').delay(150).fadeIn(150);
+    })
+
+
+})
